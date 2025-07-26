@@ -19,24 +19,24 @@ class Shape {
         drawingContext.shadowBlur = 10;
         drawingContext.shadowColor = this.shadowColor;
         
-        // Add stroke 
+        // Add stroke & color
+        fill(this.color);
         if (this.hasStroke) {
             stroke(240);
             strokeWeight(6);
+        } else {
+            noStroke();
         }
 
         // Decide what shape to draw
         switch(this.shapeType) {
-            case "sqaure":
-                fill(this.color);
+            case "square":
                 square(this.x,this.y,this.w);    
                 break
             case "circle":
-                fill(this.color);
                 circle(this.x,this.y,this.w);
                 break
             case "arc":
-                fill(this.color);
                 arc(this.x,this.y,this.w,this.w,0, this.angle,CHORD,5);
                 break
             case "three":

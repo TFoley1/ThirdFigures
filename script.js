@@ -26,7 +26,7 @@ function setup() {
     
     // Create some squares
     for (let i=0;i<numSqaures;i++){
-        shapes.push(new Shape("sqaure",getRandomBoolean()));
+        shapes.push(new Shape("square",getRandomBoolean()));
     }
 
     // Create some circles
